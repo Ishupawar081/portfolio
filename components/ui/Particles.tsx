@@ -39,8 +39,8 @@ export function Particles() {
       baseVy: number;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.x = Math.random() * canvas!.width;
+        this.y = Math.random() * canvas!.height;
         
         // Depth layers (1 = near stars, 4 = far galaxy dust)
         this.z = Math.random() * 3 + 1; 
@@ -107,11 +107,11 @@ export function Particles() {
         this.y += this.vy;
 
         // Elegant wrapping (if particles drift off-screen, they reappear silently)
-        if (this.x < -10) this.x = canvas.width + 10;
-        else if (this.x > canvas.width + 10) this.x = -10;
+        if (this.x < -10) this.x = canvas!.width + 10;
+        else if (this.x > canvas!.width + 10) this.x = -10;
         
-        if (this.y < -10) this.y = canvas.height + 10;
-        else if (this.y > canvas.height + 10) this.y = -10;
+        if (this.y < -10) this.y = canvas!.height + 10;
+        else if (this.y > canvas!.height + 10) this.y = -10;
 
         this.draw();
       }

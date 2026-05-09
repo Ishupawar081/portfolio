@@ -1,6 +1,8 @@
+import { Variants } from "framer-motion";
+
 // Advanced premium animation variants for Framer Motion
 
-export const staggerContainer = {
+export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -11,7 +13,7 @@ export const staggerContainer = {
   },
 };
 
-export const staggerItem = {
+export const staggerItem: Variants = {
   hidden: { opacity: 0, y: 20, filter: "blur(10px)" },
   visible: {
     opacity: 1,
@@ -26,7 +28,7 @@ export const staggerItem = {
   },
 };
 
-export const fadeInUp = {
+export const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
   visible: {
     opacity: 1,
@@ -41,7 +43,7 @@ export const fadeInUp = {
   },
 };
 
-export const pageTransition = {
+export const pageTransition: Variants = {
   hidden: { opacity: 0, filter: "blur(10px)" },
   visible: {
     opacity: 1,
